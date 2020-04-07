@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Feed from "./Feed";
+import Feed from "./components/Feed";
 import {
   Navbar,
   Form,
@@ -14,11 +14,13 @@ export default class App extends Component {
     posts: [],
   };
 
+  // Variable URL
   getBaseUrl() {
     return "http://localhost:8080/feed";
   }
 
   componentDidMount() {
+    // Get basic feed
     fetch(this.getBaseUrl())
       .then((res) => res.json())
       .then((data) => {
@@ -27,6 +29,7 @@ export default class App extends Component {
       .catch(console.log);
   }
 
+  // Search feed
   searchFeed = (e) => {
     e.preventDefault();
 

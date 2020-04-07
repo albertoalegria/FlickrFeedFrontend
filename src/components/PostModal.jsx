@@ -27,9 +27,7 @@ export default class PostModal extends Component {
           </h4>
           <ModalFooter>
             <br />
-            <small className="text-muted">
-              {"Date taken " + post.dateTaken}
-            </small>
+            <small className="text-muted">{"Taken " + post.dateTaken}</small>
           </ModalFooter>
         </Modal>
       </>

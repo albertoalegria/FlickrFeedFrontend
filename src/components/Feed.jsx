@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import { Container, Row } from "react-bootstrap";
 import PropTypes from "prop-types";
 import Post from "./Post";
@@ -11,6 +10,7 @@ export default class Feed extends Component {
     current: null,
   };
 
+  // Control modal visibility
   hide = (post) => {
     this.setState((prevState) => ({
       show: !prevState.show,
